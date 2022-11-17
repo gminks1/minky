@@ -157,13 +157,15 @@ private String loadPhrase()
         System.out.println("This isnt even a letter..... what are you thinking?");
         guessNum = 0;
       }
-      else{ //doesnt work
+      //when the letter is already guessed
+      else{
         System.out.println("This letter has already been guessed, guess again");
         guessNum = 0;
 
 
     }
   }
+  //if the person does not answer the question with y or n
     else{
       if(g==0){
       System.out.println("Answer with (y/n) \n");

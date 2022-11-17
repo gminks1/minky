@@ -48,16 +48,8 @@ public class Main {
        }
     }
 
-       //need to fix: the "answer with (y/n)" at the end of every game when the player guesses the word either right or wrong
         
         
-        
-
-    
-        
-
-        
-
 
 
 
