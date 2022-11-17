@@ -122,30 +122,35 @@ private String loadPhrase()
       letterGuess = guesser.nextLine(); 
       
       
-      
+      //letter is in the phrase
       if(phrase.contains(letterGuess) && letterGuess.length() == 1 && !wrongLetters.contains(letterGuess) ){
         System.out.println("This letter is in the phrase!");
         System.out.println(blankReplace(phrase));
         replace = true;
         guessNum = 0;
         wrongLetters += letterGuess;
+        //if they guess all of the letters then when the phrase is completed that person wins
+        if(blankReplace(phrase).equals(phrase)){
+          guessNum = 3;
+        }
         
 
         
 
       }
-      
+      //letter is not in the phrase
       else if(!phrase.contains(letterGuess) && letterGuess.length() == 1 && !wrongLetters.contains(letterGuess) && alphabet.contains(letterGuess)){
         System.out.println("Sorry this letter is not in the phrase");
+        System.out.println(blankReplace(phrase));
         guessNum = 1;
         wrongLetters += letterGuess;
         
         
 
       }
+      //guess again
       else if(letterGuess.length()!=1){
         System.out.println("You can only guess one letter at a time.... guess again");
-        //add a boolean here so you can no add it to blankReplace when its more than one letter
         guessNum = 0;
       }
       else if(!alphabet.contains(letterGuess)){
